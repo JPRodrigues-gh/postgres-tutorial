@@ -84,3 +84,11 @@
 
 ### Create a new file: "sql-psycopg2.py"
 - `touch sql-psycopg2.py`
+
+### stop one version to start another version
+-systemctl stop postgresql-9.3 && systemctl start postgresql-9.4
+
+-lsof -aUp $(ps --ppid 1 -o pid= -o comm= | awk '$2 == "postgres" || $2 == "postmaster" {print $1}')
+-/home/gitpod/.pg_ctl/sockets/.s.PGSQL.5432
+
+sudo ln -s /home/gitpod/.pg_ctl/sockets/.s.PGSQL.5432 /var/run/postgresql/.s.PGSQL.5432
