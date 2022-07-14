@@ -90,6 +90,7 @@
 
 -lsof -aUp $(ps --ppid 1 -o pid= -o comm= | awk '$2 == "postgres" || $2 == "postmaster" {print $1}')
 -/home/gitpod/.pg_ctl/sockets/.s.PGSQL.5432
+-sudo ln -s /home/gitpod/.pg_ctl/sockets/.s.PGSQL.5432 /var/run/postgresql/.s.PGSQL.5432
 
 ### Install SQLAlchemy
 - pip3 install SQLAlchemy
