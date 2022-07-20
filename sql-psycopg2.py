@@ -23,10 +23,10 @@ cursor = connection.cursor()
 # Query 5 - select only the albums with "ArtistId" #51 on the "Album" table
 # cursor.execute('SELECT * FROM "Album" WHERE "ArtistId" = %s', [51])
 
-# Query 6 - select all tracks where the composer is "Queen" from the "Track" table
+# Query 6 - select all tracks where the composer is "Queen" from "Track" table
 # cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s', ["Queen"])
 
-# Query 7 - select all tracks where the composer is "test" from the "Track" table
+# Query 7 - select all tracks where the composer is "test" from "Track" table
 cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s', ["test"])
 
 # fetch the results (multiple)

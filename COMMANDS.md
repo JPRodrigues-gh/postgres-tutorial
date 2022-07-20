@@ -18,7 +18,7 @@
 ### Create the new "chinook" database
 - `CREATE DATABASE chinook;`
 
-### View existing tables on the database
+### View existing databases on the database
 - `\l`
 
 ### Switch between databases
